@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title> Exercise 1 </title>
+	</head>
+	<body>
+		<h1>Password Validation</h1>
+		
+		<form>
+			<label for="password1">Password:</label>
+			<input type="password" id="pwd1" name="pwd1"><br><br>
+			<label for="password2">Verify Password:</label>
+			<input type="password" id="pwd2" name="pwd2"><br><br>
+			<input type="submit" value="Validate" onclick="verify()">
+		</form>
+		<script>
+			function verify()
+			{
+				var password1 = document.getElementById('pwd1').value;
+				var password2 = document.getElementById('pwd2').value;
+				if(password1 != password2)
+				{
+					alert("Your passwords don't match. Please try again.");
+				}
+				else if(password1.length < 8)
+				{
+					alert("Your password is too short, it must be at least 8 characters long. Please try again.");
+				}
+				else
+				{
+					alert("Your passwords have been validated. Congratulations!");
+				}
+			}
+		</script>
+	</body>
+</html>
