@@ -1,0 +1,27 @@
+body
+{
+	background-image: url(images/old-paper-background.jpg); background-size: 100%;
+	background-repeat: no-repeat; background-attachment: fixed;
+}
+
+p
+{
+	background-color: #003300;
+	color: white;
+	font-family: "Luminari"; font-size: 22pt;
+}
+
+a
+{
+	color:#cc0099;
+}
+
+a.cool
+{
+	color:#cc0099;
+}
+
+a.cool:hover
+{
+	color:#ff0000;
+}

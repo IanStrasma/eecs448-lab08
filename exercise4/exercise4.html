@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<title>Exercise 4</title>
+	</head>
+	<body>
+		<p id="p" style="border-style:solid">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non magna sed sapien vestibulum malesuada. Nulla lobortis purus vel velit sollicitudin, commodo sodales magna elementum. Etiam maximus facilisis tellus ut tempor. Mauris posuere, erat et ullamcorper cursus, ipsum odio tincidunt purus, in cursus lacus mauris ac dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce consequat vitae ligula non aliquet. Vivamus pulvinar dolor odio, sit amet pellentesque turpis blandit at. Nunc vitae sem sed est ultricies sagittis a eget odio. Suspendisse lobortis orci eget pharetra mattis. Aliquam volutpat vulputate elit, at blandit arcu blandit quis. Aliquam maximus, elit quis venenatis lobortis, dolor elit viverra enim, vel consequat libero lacus vel mauris. Proin quis neque a nisl ornare ullamcorper sed vel arcu. Aliquam sit amet felis sodales, viverra erat id, consequat justo. Nulla commodo, ipsum eget dignissim ultrices, purus ante sagittis mauris, eget finibus odio sapien quis justo. Duis porta mi eu dolor placerat semper. Quisque vestibulum elit eget sapien pharetra euismod.
+		</p>
+		<p>
+			CHANGE BACKGROUND COLOR:
+		</p>
+		<label for="redB">RED (Between 0 and 255):</label>
+		<input type="number" id="redB" min="0" max="255"><br><br>
+		<label for="greenB">GREEN (Between 0 and 255):</label>
+		<input type="number" id="greenB" min="0" max="255"><br><br>
+		<label for="blueB">BLUE (Between 0 and 255):</label>
+		<input type="number" id="blueB" min="0" max="255"><br><br>
+		<input type ="submit" value="Change Color" onclick="changeBackground()">
+		<p>
+			CHANGE BORDER COLOR/SIZE:
+		</p>
+		<label for="redR">RED (Between 0 and 255):</label>
+		<input type="number" id="redR" min="0" max="255"><br><br>
+		<label for="greenR">GREEN (Between 0 and 255):</label>
+		<input type="number" id="greenR" min="0" max="255"><br><br>
+		<label for="blueR">BLUE (Between 0 and 255):</label>
+		<input type="number" id="blueR" min="0" max="255"><br><br>
+		<label for="width">WIDTH (in px):</label>
+		<input type="number" id="width"><br><br>
+		<input type ="submit" value="Change Color" onclick="changeBorder()">
+		<script>
+			function changeBackground()
+			{
+				let paragraph = document.getElementById("p");
+				let redV = document.getElementById('redB').value;
+				let greenV = document.getElementById('greenB').value;
+				let blueV = document.getElementById('blueB').value;
+				paragraph.style.backgroundColor = "rgb(" + redV + ", " + greenV + ", " + blueV + ")";
+			}
+			function changeBorder(){
+				let paragraph2 = document.getElementById("p");
+				let redU = document.getElementById('redR').value;
+				let greenU = document.getElementById('greenR').value;
+				let blueU = document.getElementById('blueR').value;
+				let widthU = document.getElementById('width').value;
+				paragraph2.style.borderColor = "rgb(" + redU + ", " + greenU + ", " + blueU + ")";
+				paragraph2.style.borderWidth = widthU;
+			}
+		</script>
+	</body>
+</html>

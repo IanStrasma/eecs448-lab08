@@ -1,0 +1,79 @@
+<html>
+	<head>
+		<title>Cool Pokemon</title>
+	</head>
+	<body>
+		<button onclick="previousImg()">Previous</button>
+		<img id="pokemon" src="images/piplup.png" height="500" width="500">
+		<button onclick="nextImg()">Next</button>
+		<script>
+			let counter = 1;
+			function previousImg()
+			{
+				if (counter == 1) 
+				{
+					counter = 6;
+					document.getElementById("pokemon").src = "images/volcarona.png";
+				}
+				else if(counter == 2)
+				{
+					counter = 1
+					document.getElementById("pokemon").src = "images/piplup.png";
+				}
+				else if(counter == 3)
+				{
+					counter = 2
+					document.getElementById("pokemon").src = "images/absol.png";
+				}
+				else if(counter == 4)
+				{
+					counter = 3
+					document.getElementById("pokemon").src = "images/decidueye.png";
+				}
+				else if(counter == 5)
+				{
+					counter = 4
+					document.getElementById("pokemon").src = "images/luxray.png";
+				}
+				else
+				{
+					counter = 5
+					document.getElementById("pokemon").src = "images/froslass.png";
+				}
+			}
+			function nextImg() 
+			{
+				if (counter == 1) 
+				{
+					counter = 2;
+					document.getElementById("pokemon").src = "images/absol.png";
+				}
+				else if(counter == 2)
+				{
+					counter = 3
+					document.getElementById("pokemon").src = "images/decidueye.png";
+				}
+				else if(counter == 3)
+				{
+					counter = 4
+					document.getElementById("pokemon").src = "images/luxray.png";
+				}
+				else if(counter == 4)
+				{
+					counter = 5
+					document.getElementById("pokemon").src = "images/froslass.png";
+				}
+				else if(counter == 5)
+				{
+					counter = 6
+					document.getElementById("pokemon").src = "images/volcarona.png";
+				}
+				else
+				{
+					counter = 1
+					document.getElementById("pokemon").src = "images/piplup.png";
+				}
+			}
+		</script>
+	</body>
+</html>
